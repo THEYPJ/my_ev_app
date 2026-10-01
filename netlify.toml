@@ -1,0 +1,10 @@
+[build]
+  command = "flutter/bin/flutter build web --release"
+  publish = "build/web"
+  functions = "netlify/functions"
+
+# Ensures Flutter handles deep linking/routing properly
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
